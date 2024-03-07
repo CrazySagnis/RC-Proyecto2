@@ -13,6 +13,11 @@
   background-repeat: no-repeat; /* Evita que se repita la imagen */
 }
 
+.logo {
+  width: 250px;
+  border-radius: 150px;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -29,7 +34,11 @@
 
 .btn-iniciarSesion:hover,
 .btn-registrarse:hover {
-  transform: scale(1.1); /* Escalar el botón al 105% del tamaño original */
-  transition: transform 0.3s ease; /* Animación suave de 0.3 segundos */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.heroPage-txt {
+  color: white;
 }
