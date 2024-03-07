@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Donde aparece el panel y con que caracteristicas */
+#sugerenciasPanel {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  z-index: 2;
+  top: 100%;
+  width: 100%;
+  background: white;
+  display: none; /* Inicialmente oculto */
+}
+
+/* Como se ven las opciones dentro del panel */
+#sugerenciasPanel div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+/* Hoover sobre las opciones */
+#sugerenciasPanel div:hover {
+  background-color: #e9e9e9;
+}
