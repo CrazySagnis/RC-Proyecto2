@@ -7,3 +7,18 @@
 .containerheigth {
   height: 100vh;
 }
+
+/* #ContenedorErrorExito p {
+  font-size: 1.3rem;
+  border: 3px solid red;
+} */
+
+.error {
+  font-size: 1.3rem;
+  border: 3px solid red;
+}
+
+.exito {
+  font-size: 1.3rem;
+  border: 3px solid green;
+}
