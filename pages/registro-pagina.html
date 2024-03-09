@@ -24,6 +24,10 @@
         class="d-flex justify-content-center align-items-center containerheigth"
       >
         <form class="w-50">
+          <p class="text-center">
+            Bienvenido a la seccion REGISTRO. Porfavor, utilice caracteres "A-Z,
+            a-z, 0-9". Con un maximo de 12 caracteres.
+          </p>
           <div class="mb-3">
             <label for="registro-input-usuario" class="form-label"
               >Usuario</label
@@ -35,6 +39,12 @@
               aria-describedby="emailHelp"
               name="usuario"
             />
+            <small id="errorUsuarioVacio" class="text-danger"
+              >Porfavor, ingrese un USUARIO</small
+            >
+            <small id="errorUsuarioRegExp" class="text-danger"
+              >Porfavor, use caracteres validos y no mas de 12 caracteres</small
+            >
           </div>
           <div class="mb-3">
             <label for="registro-input-password" class="form-label"
@@ -46,6 +56,12 @@
               id="registro-input-password"
               name="pass"
             />
+            <small id="errorPasswordVacia" class="text-danger"
+              >Porfavor, ingrese una PASSWORD</small
+            >
+            <small id="errorPasswordRegExp" class="text-danger"
+              >Porfavor, use caracteres validos y no mas de 12 caracteres</small
+            >
           </div>
           <div class="mb-3">
             <label for="registro-input-rpassword" class="form-label"
@@ -57,8 +73,23 @@
               id="registro-input-rpassword"
               name="rpass"
             />
+            <small id="errorRPasswordVacia" class="text-danger"
+              >Porfavor, repita su PASSWORD</small
+            >
+            <small id="errorRPasswordRegExp" class="text-danger"
+              >Porfavor, use caracteres validos y no mas de 12 caracteres</small
+            >
           </div>
+          <!-- CONTENEDOR DE ERROR O EXITO -->
+          <div class="text-center" id="ContenedorErrorExito"></div>
           <div class="d-flex justify-content-center">
+            <button
+              id="irIniciarSesion"
+              type="button"
+              class="btn btn-success d-none"
+            >
+              Iniciar Sesion
+            </button>
             <button id="registro-btn" type="submit" class="btn btn-success">
               Registrarse
             </button>
