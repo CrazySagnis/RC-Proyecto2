@@ -1,0 +1,108 @@
+// Tomo los elementos del HTML
+
+const loginInputUsuario = document.getElementById("login-input-usuario");
+
+const loginInputPassword = document.getElementById("login-input-password");
+
+const loginBtn = document.getElementById("login-btn");
+
+const errorUsuarioVacio = document.getElementById("errorUsuarioVacio");
+
+const errorPasswordVacia = document.getElementById("errorPasswordVacia");
+
+const ContenedorError = document.getElementById("ContenedorError");
+
+errorUsuarioVacio.classList.add("d-none");
+errorPasswordVacia.classList.add("d-none");
+
+// Aplico placeholder a los elementos
+
+loginInputUsuario.placeholder = "Ingrese su USUARIO";
+
+loginInputPassword.placeholder = "Ingrese su PASSWORD";
+
+// Array de Usuarios en LocalStorage
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+// Objeto para guardar la informacion
+
+const formUsuario = {
+  usuario: "",
+  pass: "",
+};
+
+// Eventos
+const valoresForm = (event) => {
+  const { name, value } = event.target;
+  formUsuario[name] = value;
+
+  if (name === "usuario") {
+    errorUsuarioVacio.classList.add("d-none");
+    loginInputUsuario.classList.remove("is-invalid");
+  }
+
+  if (name === "pass") {
+    errorPasswordVacia.classList.add("d-none");
+    loginInputPassword.classList.remove("is-invalid");
+  }
+};
+
+// Button
+const enviarForm = (e) => {
+  e.preventDefault();
+
+  const { usuario, pass } = formUsuario;
+
+  if (!usuario && !pass) {
+    errorUsuarioVacio.classList.remove("d-none");
+    errorPasswordVacia.classList.remove("d-none");
+    loginInputUsuario.classList.add("is-invalid");
+    loginInputPassword.classList.add("is-invalid");
+  } else if (!usuario) {
+    errorUsuarioVacio.classList.remove("d-none");
+    loginInputUsuario.classList.add("is-invalid");
+  } else if (!pass) {
+    errorPasswordVacia.classList.remove("d-none");
+    loginInputPassword.classList.add("is-invalid");
+  } else {
+    const usuarioExiste = usuarios.find(
+      (usuario) => usuario.usuarioNombre === usuario
+    );
+    const usuarioIndice = usuarios.findIndex(
+      (usuario) => usuario.usuarioNombre === usuario
+    );
+    if (!usuarioExiste) {
+      const loginError = document.createElement("p");
+      loginError.classList.add("error");
+      loginError.classList.add("text-danger");
+      loginError.innerHTML = "Usuario y/o Password incorrectas";
+      ContenedorError.appendChild(loginError);
+      console.log("usuario no existe");
+    }
+    if (pass === usuarioExiste.pass) {
+      usuarios[usuarioIndice].login = true;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      location.href = "../pages/Home.html";
+    } else {
+      //Usuario o Password incorrectas
+      const loginError = document.createElement("p");
+      loginError.classList.add("error");
+      loginError.classList.add("text-danger");
+      loginError.innerHTML = "Usuario y/o Password incorrectas";
+      ContenedorError.appendChild(loginError);
+    }
+  }
+};
+
+loginBtn.addEventListener("click", enviarForm);
+// INPUTS
+
+// Input Usuario
+loginInputUsuario.addEventListener("input", valoresForm);
+// Input Pass
+loginInputPassword.addEventListener("input", valoresForm);
+// Input RPass
+
+// que no se repita usuario
+// Acomodar que el cartel de "PASSWORD NO COINCIDEN" desaparezca cuando la creacion es un exito
+// Acomodar que el cartel de "PASSWORD NO COINCIDEN" desaparezca cuando tengo otro error en las passwords.

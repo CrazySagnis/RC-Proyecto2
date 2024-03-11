@@ -85,12 +85,24 @@ const enviarForm = (e) => {
 
   const { usuario, pass, rpass } = formUsuario;
 
+  ContenedorErrorExito.innerHTML = "";
+
   const validacionUsuario = new RegExp(/^[a-zA-Z0-9]{5,12}$/).test(usuario);
   const validacionPassword = new RegExp(/^[a-zA-Z0-9]{5,12}$/).test(pass);
   const validacionRPassword = new RegExp(/^[a-zA-Z0-9]{5,12}$/).test(rpass);
-  console.log(validacionUsuario);
-  console.log(validacionPassword);
-  console.log(validacionRPassword);
+
+  const usuarioExiste = usuarios.find((user) => user.usuarioNombre === usuario);
+
+  // Validar si el usuario ya existe
+  if (usuarioExiste) {
+    const pUsuarioExistente = document.createElement("p");
+    pUsuarioExistente.classList.add("error");
+    pUsuarioExistente.classList.add("text-danger");
+    pUsuarioExistente.innerHTML =
+      "El usuario ya esta en uso. Por favor, elija otro.";
+    ContenedorErrorExito.appendChild(pUsuarioExistente);
+    return; // Salir de la función si el usuario ya existe
+  }
 
   if (!usuario && !pass && !rpass) {
     errorUsuarioVacio.classList.remove("d-none");
@@ -121,6 +133,12 @@ const enviarForm = (e) => {
     registroInputPassword.classList.add("is-invalid");
     errorRPasswordRegExp.classList.remove("d-none");
     registroInputRPassword.classList.add("is-invalid");
+  } else if (!validacionPassword) {
+    errorPasswordRegExp.classList.remove("d-none");
+    registroInputPassword.classList.add("is-invalid");
+  } else if (!validacionRPassword) {
+    errorRPasswordRegExp.classList.remove("d-none");
+    registroInputRPassword.classList.add("is-invalid");
   } else {
     if (
       pass === rpass &&
@@ -136,7 +154,7 @@ const enviarForm = (e) => {
 
         const nuevoUsuario = {
           id: idUsuario,
-          usuario,
+          usuarioNombre: usuario,
           pass,
           login: false,
           delete: false,
@@ -145,7 +163,7 @@ const enviarForm = (e) => {
         // SE CREA LA CUENTA CON ID DINAMICO
         usuarios.push(nuevoUsuario);
 
-        localStorage.setItem("usuario", JSON.stringify(usuarios));
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
         const pCuentaCreada = document.createElement("p");
         pCuentaCreada.classList.add("exito");
         pCuentaCreada.classList.add("text-success");
@@ -156,7 +174,7 @@ const enviarForm = (e) => {
       } else {
         const nuevoUsuario = {
           id: 1,
-          usuario,
+          usuarioNombre: usuario,
           pass,
           login: false,
           delete: false,
@@ -164,7 +182,7 @@ const enviarForm = (e) => {
         };
         // SE CREA LA PRIMER CUENTA
         usuarios.push(nuevoUsuario);
-        localStorage.setItem("usuario", JSON.stringify(usuarios));
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
         const pCuentaCreada = document.createElement("p");
         pCuentaCreada.classList.add("exito");
         pCuentaCreada.classList.add("text-success");
@@ -193,7 +211,3 @@ registroInputUsuario.addEventListener("input", valoresForm);
 registroInputPassword.addEventListener("input", valoresForm);
 // Input RPass
 registroInputRPassword.addEventListener("input", valoresForm);
-
-// que no se repita usuario
-// Acomodar que el cartel de error de PASSWORD desaparezca cuando la creacion es un exito
-//
