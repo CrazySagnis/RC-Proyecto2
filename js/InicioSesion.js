@@ -1,15 +1,10 @@
 // Tomo los elementos del HTML
 
 const loginInputUsuario = document.getElementById("login-input-usuario");
-
 const loginInputPassword = document.getElementById("login-input-password");
-
 const loginBtn = document.getElementById("login-btn");
-
 const errorUsuarioVacio = document.getElementById("errorUsuarioVacio");
-
 const errorPasswordVacia = document.getElementById("errorPasswordVacia");
-
 const ContenedorError = document.getElementById("ContenedorError");
 
 errorUsuarioVacio.classList.add("d-none");
@@ -18,7 +13,6 @@ errorPasswordVacia.classList.add("d-none");
 // Aplico placeholder a los elementos
 
 loginInputUsuario.placeholder = "Ingrese su USUARIO";
-
 loginInputPassword.placeholder = "Ingrese su PASSWORD";
 
 // Array de Usuarios en LocalStorage
@@ -53,6 +47,8 @@ const enviarForm = (e) => {
 
   const { usuario, pass } = formUsuario;
 
+  ContenedorError.innerHTML = "";
+
   if (!usuario && !pass) {
     errorUsuarioVacio.classList.remove("d-none");
     errorPasswordVacia.classList.remove("d-none");
@@ -66,10 +62,10 @@ const enviarForm = (e) => {
     loginInputPassword.classList.add("is-invalid");
   } else {
     const usuarioExiste = usuarios.find(
-      (usuario) => usuario.usuarioNombre === usuario
+      (user) => user.usuarioNombre === usuario
     );
     const usuarioIndice = usuarios.findIndex(
-      (usuario) => usuario.usuarioNombre === usuario
+      (user) => user.usuarioNombre === usuario
     );
     if (!usuarioExiste) {
       const loginError = document.createElement("p");
@@ -102,7 +98,3 @@ loginInputUsuario.addEventListener("input", valoresForm);
 // Input Pass
 loginInputPassword.addEventListener("input", valoresForm);
 // Input RPass
-
-// que no se repita usuario
-// Acomodar que el cartel de "PASSWORD NO COINCIDEN" desaparezca cuando la creacion es un exito
-// Acomodar que el cartel de "PASSWORD NO COINCIDEN" desaparezca cuando tengo otro error en las passwords.
