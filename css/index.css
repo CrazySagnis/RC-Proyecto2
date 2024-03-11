@@ -42,3 +42,11 @@
 .heroPage-txt {
   color: white;
 }
+
+.heroPage-txt {
+  font-size: 1.3rem;
+}
+
+a {
+  font-size: 1.2rem;
+}
