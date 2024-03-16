@@ -170,6 +170,12 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.descuento {
+  color: red;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
 .btn-fav {
   color: white;
   background-color: rgb(75, 71, 71);
