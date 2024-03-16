@@ -173,7 +173,8 @@ footer {
 .descuento {
   color: red;
   margin-left: 5px;
-  font-size: 13px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-fav {
