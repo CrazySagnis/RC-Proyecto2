@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es_AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="la pagina esde venta de productos de electrodomesticos."
+    />
+    <meta
+      name="author"
+      content="Gonzalo martinez,Felipe gutierrez y Gustavo venturini"
+    />
+    <meta name="keywords" content="PALABRAS CLAVES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5a43d09774.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/equipo.css" />
+    <title>Pagina principal</title>
+    <link rel="icon fav" href="/images/logo PNG.png" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a href="/pages/Home.html"
+            ><img src="/images/Logo png.png" alt="logo empresa" width="65"
+          /></a>
+          <div
+            class="d-flex justify-content-center align-items-center flex-grow-1"
+          >
+            <form id="contenedorBusqueda" class="d-flex w-75">
+              <input
+                id="inputBarraBusqueda"
+                class="form-control me-2"
+                type="text"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse gap-5"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="btn btn-contacto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Contacto
+                </button>
+                <!-- Modal -->
+                <div
+                  class="modal fade text-black"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Contacto
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"
+                              >Usuario</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-buscar"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              required
+                              maxlength="50"
+                              minlength="8"
+                              pattern="[a-zA-Z0-9]+"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="exampleInputPassword1"
+                              class="form-label"
+                              >Mensaje</label
+                            >
+                            <textarea
+                              class="form-control input-buscar-msj"
+                              required
+                              id="floatingTextarea"
+                            ></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-enviar">
+                            Enviar
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pr-3" href="#">Equipo</a>
+              </li>
+              <ul
+                class="navbar-nav ms-auto mb-2 mb-lg-0 btn-icon align-items-center"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link nav-link icon-us"
+                    title="Favoritos"
+                    href="./favoritos.html"
+                    ><i class="fa-regular fa-star"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link nav-link icon-us"
+                    title="Carrito"
+                    href="./carrito.html"
+                    ><i class="fa-solid fa-cart-shopping"></i
+                  ></a>
+                </li>
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn button-cerrar-sesion"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                >
+                  <a class="nav-link cerrar-sesion">Cerrar Sesión</a>
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal2"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Cerrar Sesion
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        ¿Estas seguro de que quieres salir?
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-azul"
+                          data-bs-dismiss="modal"
+                        >
+                          No
+                        </button>
+                        <a class="btn btn-rojo" href="/index.html">Si</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </ul>
+            <!--               <li class="nav-item">
+                <a class="nav-link active pr-3" href="#">Equipo</a>
+              </li>
+              <div class="d-flex gap-2">
+                <li class="nav-item">
+                  <button type="button pl-2" class="btn btn-success">
+                    Carrito
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-warning">
+                    Favorito
+                  </button>
+                </li>
+              </div>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button type="button" class="btn btn-danger">
+                  Cerrar Sesion
+                </button>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row justify-content-evenly">
+          <div
+            class="col-9 col-md-5 col-lg-2 d-flex flex-column mb-5 mt-4 border b-author bg-color cont-author"
+          >
+            <div>
+              <div class="d-flex justify-content-center my-2">
+                <img
+                  src="../images/gustavo.jpg"
+                  alt="Gustavo Arturo"
+                  width="175"
+                  height="175"
+                  class="img-author"
+                />
+              </div>
+              <h4 class="text-center my-1">Gustavo Arturo Garcia Venturi</h4>
+              <p class="p-1 text-center">
+                ¡Hola! Mi nombre es Gustavo Tengo 25 años, soy estudiante de
+                Comercio Exterior, Programación e idiomas. Me gusta entrenar y
+                hacer deportes de contacto/artes marciales. En mis tiempos
+                libres practico tiro deportivo, tiro con arco o juego a la compu
+                con mis amigos. Mi comida favorita son tacos de pollo caseros o
+                empanadas de carne caseras y me gusta cenar 2 veces.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-9 col-md-5 col-lg-2 d-flex flex-column mb-5 mt-4 border b-author bg-color cont-author"
+          >
+            <div>
+              <div class="d-flex justify-content-center my-2">
+                <img
+                  src="../images/Felipe.jpg"
+                  alt="Felipe"
+                  width="175"
+                  height="175"
+                  class="img-author"
+                />
+              </div>
+              <h4 class="text-center my-1">Felipe Gutierrez</h4>
+              <p class="p-1 text-center">
+                Hola a todos, soy Felipe Gutiérrez, tengo 28 años, soy técnico
+                mecánico electricista. Me gusta hacer deportes, practico tenis
+                desde muy chico, pádel, futbol y básquet. Juego algunos
+                videojuegos y estudio programación. Me considero una persona
+                extrovertida, graciosa y con mucho ánimo de hacer e intentar
+                cosas nuevas. Me gusta salir con amigos y soy muy familiero. No
+                puede faltarme un buen asado acompañado de una cerveza
+                el fin de semana.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-9 col-md-5 col-lg-2 d-flex flex-column mb-5 mt-4 border b-author bg-color cont-author"
+          >
+            <div>
+              <div class="d-flex justify-content-center my-2">
+                <img
+                  src="../images/gonzalo.jpg"
+                  alt="Gonzalo"
+                  width="175"
+                  height="175"
+                  class="img-author"
+                />
+              </div>
+              <h4 class="text-center my-1">Gonzalo Martinez</h4>
+              <p class="p-1 text-center">
+                ¡Hola a todos! Mi nombre es Gonzalo Martínez, soy de la ciudad de San Miguel deTucumán, tengo 20 años. Soy una persona muy activa, me gusta mucho ir al gimnasio, me gusta mucho escuchar música, pasar tiempo con amigos, hacer deportes, jugar a videojuegos y estar  con mi familia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-between align-items-center p-2">
+          <div class="col-12 d-flex justify-content-center col-md-6 col-lg-2">
+            <img src="../images/Logo png.png" alt="" width="100px" />
+          </div>
+
+          <div
+            class="row text-center d-flex justify-content-center col-md-6 col-lg-2"
+          >
+            <a href="/pages/error404.html" class="text-decoration-none footer-ink"
+              >Condiciones de uso</a
+            >
+            <a href="/pages/error404.html" class="text-decoration-none footer-ink">Ayuda</a>
+          </div>
+
+          <div
+            class="col-12 d-flex justify-content-center col-md-6 col-lg-2 col-foot"
+          >
+            <a
+              class="fav-icon"
+              href="https://www.instagram.com/electrohogar_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              ><i title="Instagram" class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              class="fav-icon"
+              href="https://www.facebook.com/profile.php?id=61553695792223"
+              target="_blank"
+              ><i title="Facebook" class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              class="fav-icon"
+              href="https://api.whatsapp.com/send?phone=3865339969"
+              target="_blank"
+              ><i title="Whatsapp" class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+
+          <div
+            class="row text-center d-flex justify-content-center col-md-6 col-lg-2"
+          >
+            <a
+              href="/pages/error404.html"
+              class="text-decoration-none footer-ink"
+              >Copyright 2024</a
+            >
+            <a href="/pages/error404.html" class="text-decoration-none footer-ink"
+              >Informacion legal</a
+            >
+          </div>
+
+          <div
+            class="col-12 d-flex justify-content-center col-md-6 col-lg-2 mt-3 p-2"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1180326986523!2d-65.20965798920538!3d-26.83619788991351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1698084632987!5m2!1ses!2sar"
+              width="150"
+              height="100"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

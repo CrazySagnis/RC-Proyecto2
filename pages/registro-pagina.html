@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="/css/registro.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -17,16 +17,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon fav" href="/images/logo PNG.png" />
   </head>
-  <body>
+  <body class="body-main">
     <main>
-      <div
-        class="d-flex justify-content-center align-items-center containerheigth"
-      >
-        <form class="w-50">
+      <div class="d-flex justify-content-center my-5 py-4 align-items-center">
+        <form class="w-25">
           <p class="text-center">
-            Bienvenido a la seccion REGISTRO. Porfavor, utilice caracteres "A-Z,
-            a-z, 0-9". Con un maximo de 12 caracteres.
+            Por favor, ingrese un nombre de usuario con un maximo de 12
+            caracteres y sin caracteres especiales (°!$-*/#).
           </p>
           <div class="mb-3">
             <label for="registro-input-usuario" class="form-label"
@@ -34,7 +33,7 @@
             >
             <input
               type="text"
-              class="form-control"
+              class="input-buscar"
               id="registro-input-usuario"
               aria-describedby="emailHelp"
               name="usuario"
@@ -48,16 +47,16 @@
           </div>
           <div class="mb-3">
             <label for="registro-input-password" class="form-label"
-              >Password</label
+              >Contraseña</label
             >
             <input
               type="password"
-              class="form-control"
+              class="input-buscar"
               id="registro-input-password"
               name="pass"
             />
             <small id="errorPasswordVacia" class="text-danger"
-              >Porfavor, ingrese una PASSWORD</small
+              >Porfavor, ingrese una CONTRASEÑA</small
             >
             <small id="errorPasswordRegExp" class="text-danger"
               >Porfavor, use caracteres validos y entre 5 a 12 caracteres</small
@@ -65,21 +64,33 @@
           </div>
           <div class="mb-3">
             <label for="registro-input-rpassword" class="form-label"
-              >Repetir Password</label
+              >Repetir contraseña</label
             >
             <input
               type="password"
-              class="form-control"
+              class="input-buscar"
               id="registro-input-rpassword"
               name="rpass"
             />
             <small id="errorRPasswordVacia" class="text-danger"
-              >Porfavor, repita su PASSWORD</small
+              >Porfavor, repita su CONTRASEÑA</small
             >
             <small id="errorRPasswordRegExp" class="text-danger"
               >Porfavor, use caracteres validos y entre 5 a 12 caracteres</small
             >
           </div>
+          <!--   <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+              required
+            />
+            <label class="form-check-label mb-2" for="exampleCheck1"
+              >Aceptar Terminos y Condiciones</label
+              required
+          >
+          </div> -->
           <!-- CONTENEDOR DE ERROR O EXITO -->
           <div class="text-center" id="ContenedorErrorExito"></div>
           <div class="d-flex justify-content-center">
@@ -94,11 +105,28 @@
                 >Ir a Iniciar Sesion</a
               >
             </button>
-            <button id="registro-btn" type="submit" class="btn btn-success">
+            <button
+              id="registro-btn"
+              type="submit"
+              class="mb-3 btn-registrarse"
+            >
               Registrarse
             </button>
           </div>
+          <div>
+            <p>
+              Si ya tienes una cuenta, haz click
+              <a href="./InicioSesion-pagina.html">AQUI</a>
+            </p>
+          </div>
         </form>
+        <div class="resp-img mx-5">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/11/Home-Appliance-Background-PNG.png"
+            alt="imagen fotos"
+            width="500"
+          />
+        </div>
       </div>
     </main>
     <script src="/js/registro.js"></script>

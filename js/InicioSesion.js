@@ -13,7 +13,7 @@ errorPasswordVacia.classList.add("d-none");
 // Aplico placeholder a los elementos
 
 loginInputUsuario.placeholder = "Ingrese su USUARIO";
-loginInputPassword.placeholder = "Ingrese su PASSWORD";
+loginInputPassword.placeholder = "Ingrese su CONTRASEÑA";
 
 // Array de Usuarios en LocalStorage
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -71,7 +71,7 @@ const enviarForm = (e) => {
       const loginError = document.createElement("p");
       loginError.classList.add("error");
       loginError.classList.add("text-danger");
-      loginError.innerHTML = "Usuario y/o Password incorrectas";
+      loginError.innerHTML = "Usuario y/o contraseña incorrectos";
       ContenedorError.appendChild(loginError);
       console.log("usuario no existe");
     }
@@ -84,7 +84,7 @@ const enviarForm = (e) => {
       const loginError = document.createElement("p");
       loginError.classList.add("error");
       loginError.classList.add("text-danger");
-      loginError.innerHTML = "Usuario y/o Password incorrectas";
+      loginError.innerHTML = "Usuario y/o contraseña incorrectos";
       ContenedorError.appendChild(loginError);
     }
   }
