@@ -5,10 +5,63 @@
 }
 
 .containerheigth {
-  height: 100vh;
+  height: auto;
 }
 
 .error {
-  font-size: 1.3rem;
-  border: 3px solid red;
+  font-size: 1.2rem;
+  border: 1px solid rgb(121, 7, 7);
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+.resp-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.input-buscar {
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-buscar:focus {
+  border-color: green;
+  box-shadow: 0 0 5px green;
+  outline: none;
+}
+
+.nav-item:hover {
+  color: rgb(17, 46, 53);
+}
+
+.body-main {
+  background-color: rgb(211, 211, 211);
+}
+
+.btn-iniciarSesion:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-iniciarSesion {
+  height: 100%;
+  width: 50%;
+  color: azure;
+  font-size: 1.2rem;
+  border: 1px solid rgb(13, 145, 35);
+  background-color: rgba(13, 145, 35, 0.842);
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .resp-img {
+    display: none; /* Oculta la imagen cuando la pantalla es más pequeña que 600px */
+  }
 }

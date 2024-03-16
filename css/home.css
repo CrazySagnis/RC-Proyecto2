@@ -3,11 +3,248 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
+
 footer {
   margin-top: auto;
+}
+
+header {
+  background: rgb(197, 197, 195);
+}
+
+/* Donde aparece el panel y con que caracteristicas */
+#sugerenciasPanel {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  z-index: 2;
+  top: 100%;
+  width: 100%;
+  background: white;
+  display: none; /* Inicialmente oculto */
+}
+
+/* Como se ven las opciones dentro del panel */
+#sugerenciasPanel div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+/* Hoover sobre las opciones */
+#sugerenciasPanel div:hover {
+  background-color: #e9e9e9;
+}
+
+.fav-icon {
+  color: black;
+  transition: color 0.3s;
+  font-size: 30px;
+  padding: 0px 4px;
+}
+
+.fav-icon:hover {
+  color: azure;
+}
+
+footer {
+  margin-top: auto;
+  background: rgba(165, 156, 149, 0.377);
+}
+
+.icon-us {
+  color: black;
+}
+
+.icon-us:hover {
+  color: rgb(226, 213, 31);
+}
+
+.cerrar-sesion {
+  color: black;
+}
+
+.cerrar-sesion:hover {
+  color: rgba(255, 0, 0, 0.849);
+}
+
+.btn-enviar {
+  color: white;
+  background-color: cornflowerblue;
+  margin-inline-start: 2px;
+  border-radius: 8px;
+  border: 1px solid cornflowerblue;
+}
+
+.btn-enviar:hover {
+  background-color: rgba(26, 143, 56, 0.829);
+  color: white;
+}
+
+.input-buscar {
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-buscar:focus {
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  outline: none;
+}
+
+.btn-rojo {
+  color: white;
+  margin-inline-start: 2px;
+  border-radius: 8px;
+  border: 1px solid rgb(190, 24, 24);
+  background-color: rgb(190, 24, 24);
+}
+
+.btn-rojo:hover {
+  background-color: red;
+  color: white;
+}
+
+.btn-azul {
+  color: white;
+  margin-inline-start: 2px;
+  border-radius: 8px;
+  border: 1px solid rgb(65, 65, 73);
+  background-color: rgb(54, 54, 54);
+}
+
+.btn-azul:hover {
+  color: white;
+  background-color: rgb(138, 138, 138);
+}
+
+.body-main {
+  background-color: rgb(211, 211, 211);
+}
+
+.card-img-top {
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s;
+}
+
+.card {
+  height: 36rem;
+  width: 24rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.card-text {
+  color: black;
+}
+
+.cuotas {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.precio {
+  color: rgb(22, 21, 21);
+  font-size: 28px;
+  font-style: inherit;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-fav {
+  color: white;
+  background-color: rgb(75, 71, 71);
+  border-radius: 0%;
+}
+
+.btn-carr {
+  color: white;
+  background-color: rgb(75, 71, 71);
+  border-radius: 0%;
+}
+
+.btn-ver {
+  color: white;
+  background-color: rgb(75, 71, 71);
+  border-radius: 0%;
+}
+
+.btn-fav:hover {
+  background-color: rgb(75, 71, 71);
+  color: yellow;
+}
+
+.btn-carr:hover {
+  background-color: rgb(75, 71, 71);
+  color: rgb(0, 211, 0);
+}
+
+.btn-ver:hover {
+  background-color: rgb(75, 71, 71);
+  color: aqua;
+}
+
+.footer-ink {
+  color: black;
+}
+
+.footer-ink:hover {
+  color: azure;
+}
+
+.img-publi {
+  border-radius: 30px;
+}
+
+.clase-carousel {
+  height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .img-publi {
+    display: none;
+    height: auto;
+    width: auto;
+  }
+
+  .clase-carousel {
+    width: 100vw;
+    height: max-content;
+    height: 240px;
+  }
+}
+
+@media (min-width: 769px) {
+  .clase-carousel {
+    width: 100vw;
+    height: max-content;
+    height: 80%px;
+  }
+}
+
+@media (min-width: 993px) {
+  .clase-carousel {
+    width: 100vw;
+    height: max-content;
+    height: 80%px;
+  }
 }

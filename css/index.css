@@ -50,3 +50,25 @@
 a {
   font-size: 1.2rem;
 }
+
+.btn-iniciarSesion {
+  height: 100%;
+  width: 80%;
+  color: azure;
+  font-size: 1.2rem;
+  border: 1px solid rgb(13, 145, 35);
+  background-color: rgba(13, 145, 35, 0.842);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.btn-registrarse {
+  height: 100%;
+  width: 80%;
+  color: azure;
+  font-size: 1.2rem;
+  border: 1px solid rgb(14, 16, 138);
+  background-color: rgba(16, 16, 179, 0.836);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}

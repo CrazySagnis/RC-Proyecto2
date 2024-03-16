@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Inicio de sesion</title>
     <link rel="stylesheet" href="/css/InicioSesion.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -11,18 +11,24 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon fav" href="/images/logo PNG.png" />
   </head>
-  <body>
+  <body class="body-main">
     <main>
-      <div
-        class="d-flex justify-content-center align-items-center containerheigth"
-      >
-        <form class="w-50">
+      <div class="d-flex justify-content-center my-5 py-5 align-items-center">
+        <div class="resp-img mx-5">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/11/Home-Appliance-Background-PNG.png"
+            alt="imagen fotos"
+            width="500"
+          />
+        </div>
+        <form class="w-25">
           <div class="mb-3">
             <label for="login-input-usuario" class="form-label">Usuario</label>
             <input
               type="text"
-              class="form-control"
+              class="input-buscar"
               id="login-input-usuario"
               aria-describedby="emailHelp"
               name="usuario"
@@ -33,27 +39,30 @@
           </div>
           <div class="mb-3">
             <label for="login-input-password" class="form-label"
-              >Password</label
+              >Contraseña</label
             >
             <input
               type="password"
-              class="form-control"
+              class="input-buscar"
               id="login-input-password"
               name="pass"
             />
             <small id="errorPasswordVacia" class="text-danger"
-              >Porfavor, introduzca su PASSWORD</small
+              >Porfavor, introduzca su CONTRASEÑA</small
             >
+          </div>
+          <div class="">
+            <a href="/pages/error404.html"> ¿Olvidaste tu contraseña?</a>
           </div>
           <div class="text-center" id="ContenedorError"></div>
           <div class="d-flex justify-content-center">
-            <button id="login-btn" type="submit" class="btn btn-success">
+            <button id="login-btn" type="submit" class="btn-iniciarSesion m-4">
               Iniciar Sesion
             </button>
           </div>
           <p>
-            Tambien puedes volver a
-            <a href="./registro-pagina.html">Registro</a>
+            ¿No tienes una cuenta? Haz click
+            <a href="./registro-pagina.html">AQUI</a>
           </p>
         </form>
       </div>

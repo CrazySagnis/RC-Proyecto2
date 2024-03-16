@@ -9,13 +9,17 @@
 }
 
 .error {
-  font-size: 1.3rem;
-  border: 3px solid red;
+  font-size: 1.2rem;
+  border: 1px solid rgb(121, 7, 7);
+  margin-top: 16px;
+  border-radius: 10px;
 }
 
 .exito {
-  font-size: 1.3rem;
-  border: 3px solid green;
+  font-size: 1.2rem;
+  border: 1px solid rgb(4, 94, 4);
+  margin-top: 16px;
+  border-radius: 10px;
 }
 
 #registro-btn {
@@ -24,4 +28,51 @@
 
 a {
   font-size: 1.2rem;
+}
+
+.resp-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.body-main {
+  background-color: rgb(211, 211, 211);
+}
+
+.input-buscar {
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-buscar:focus {
+  border-color: blue;
+  box-shadow: 0 0 5px blue;
+  outline: none;
+}
+
+.btn-registrarse:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-registrarse {
+  height: 100%;
+  width: 50%;
+  color: azure;
+  font-size: 1.2rem;
+  border: 1px solid rgb(13, 33, 145);
+  background-color: rgba(13, 33, 145, 0.842);
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .resp-img {
+    display: none; /* Oculta la imagen cuando la pantalla es más pequeña que 600px */
+  }
 }

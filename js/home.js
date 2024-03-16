@@ -1,4 +1,4 @@
-alert("bienvenidos a nuestra pagina");
+/* alert("bienvenidos a nuestra pagina"); */
 const divProductos = document.getElementById("divProductos");
 const productos = [
   { id: 1, nombre: "Producto 1", precio: 10.99, codigo: "ABC123" },

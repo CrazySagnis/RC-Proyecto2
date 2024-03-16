@@ -39,9 +39,9 @@ errorRPasswordRegExp.classList.add("d-none");
 
 registroInputUsuario.placeholder = "Ingrese su usuario deseado";
 
-registroInputPassword.placeholder = "Ingrese su password deseada";
+registroInputPassword.placeholder = "Ingrese su contraseña deseada";
 
-registroInputRPassword.placeholder = "Repita su password deseada";
+registroInputRPassword.placeholder = "Repita su contraseña deseada";
 
 // Array de Usuarios en LocalStorage
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -98,8 +98,7 @@ const enviarForm = (e) => {
     const pUsuarioExistente = document.createElement("p");
     pUsuarioExistente.classList.add("error");
     pUsuarioExistente.classList.add("text-danger");
-    pUsuarioExistente.innerHTML =
-      "El usuario ya esta en uso. Por favor, elija otro.";
+    pUsuarioExistente.innerHTML = "El usuario ya esta en uso. Por favor, elija otro.";
     ContenedorErrorExito.appendChild(pUsuarioExistente);
     return; // Salir de la función si el usuario ya existe
   }
@@ -167,7 +166,7 @@ const enviarForm = (e) => {
         const pCuentaCreada = document.createElement("p");
         pCuentaCreada.classList.add("exito");
         pCuentaCreada.classList.add("text-success");
-        pCuentaCreada.innerHTML = "Cuenta creada con EXITO.";
+        pCuentaCreada.innerHTML = "Cuenta creada exitosamente.";
         ContenedorErrorExito.appendChild(pCuentaCreada);
         registroBtn.classList.add("d-none");
         irIniciarSesion.classList.remove("d-none");
@@ -186,8 +185,8 @@ const enviarForm = (e) => {
         const pCuentaCreada = document.createElement("p");
         pCuentaCreada.classList.add("exito");
         pCuentaCreada.classList.add("text-success");
-        pCuentaCreada.innerHTML = "Cuenta creada con EXITO.";
-        ContenedorErrorExito.appendChild(pCuentaCreada);
+        pCuentaCreada.innerHTML = "Cuenta creada exitosamente.";
+        ContenedorErrorExito.appendChild(pCuentaCreada); 
         registroBtn.classList.add("d-none");
         irIniciarSesion.classList.remove("d-none");
       }
@@ -196,7 +195,7 @@ const enviarForm = (e) => {
       const pErrorPasswords = document.createElement("p");
       pErrorPasswords.classList.add("error");
       pErrorPasswords.classList.add("text-danger");
-      pErrorPasswords.innerHTML = "Las PASSWORDS no coinciden.";
+      pErrorPasswords.innerHTML = "Las contraseñas no coinciden";
       ContenedorErrorExito.appendChild(pErrorPasswords);
     }
   }
