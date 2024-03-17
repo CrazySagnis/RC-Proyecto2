@@ -45,7 +45,16 @@ registroInputRPassword.placeholder = "Repita su contraseña deseada";
 
 // Array de Usuarios en LocalStorage
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+document.body.onload = function () {
+  chequearLogeo();
+};
 
+function chequearLogeo() {
+  const usuarioLogeado = usuarios.find((usuario) => usuario.login);
+  if (usuarioLogeado) {
+    location.href = "../pages/Home.html";
+  }
+}
 // Objeto para guardar la informacion
 
 const formUsuario = {
@@ -98,7 +107,8 @@ const enviarForm = (e) => {
     const pUsuarioExistente = document.createElement("p");
     pUsuarioExistente.classList.add("error");
     pUsuarioExistente.classList.add("text-danger");
-    pUsuarioExistente.innerHTML = "El usuario ya esta en uso. Por favor, elija otro.";
+    pUsuarioExistente.innerHTML =
+      "El usuario ya esta en uso. Por favor, elija otro.";
     ContenedorErrorExito.appendChild(pUsuarioExistente);
     return; // Salir de la función si el usuario ya existe
   }
@@ -186,7 +196,7 @@ const enviarForm = (e) => {
         pCuentaCreada.classList.add("exito");
         pCuentaCreada.classList.add("text-success");
         pCuentaCreada.innerHTML = "Cuenta creada exitosamente.";
-        ContenedorErrorExito.appendChild(pCuentaCreada); 
+        ContenedorErrorExito.appendChild(pCuentaCreada);
         registroBtn.classList.add("d-none");
         irIniciarSesion.classList.remove("d-none");
       }

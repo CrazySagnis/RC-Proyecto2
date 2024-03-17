@@ -8,36 +8,104 @@ const cerrarSesion = () => {
 
 siCerrarSesion.addEventListener("click", cerrarSesion);
 
-// CODIGO DE GONZALO
-// const divProductos = document.getElementById("divProductos");
-// const productos = [
-//   { id: 1, nombre: "Producto 1", precio: 10.99, codigo: "ABC123" },
-//   { id: 2, nombre: "Producto 2", precio: 19.99, codigo: "DEF456" },
-//   { id: 3, nombre: "Producto 3", precio: 5.49, codigo: "GHI789" },
-//   { id: 4, nombre: "Producto 4", precio: 15.75, codigo: "JKL012" },
-//   { id: 5, nombre: "Producto 5", precio: 8.25, codigo: "MNO345" },
-//   { id: 6, nombre: "Producto 6", precio: 12.5, codigo: "PQR678" },
-//   { id: 7, nombre: "Producto 7", precio: 7.99, codigo: "STU901" },
-//   { id: 8, nombre: "Producto 8", precio: 23.45, codigo: "VWX234" },
-//   { id: 9, nombre: "Producto 9", precio: 14.2, codigo: "YZA567" },
-//   { id: 10, nombre: "Producto 10", precio: 11.3, codigo: "BCD890" },
-// ];
+const arrayProductos = [
+  {
+    id: 1,
+    nombre: "Iphone 15 PRO (128-256GB) Titanio Gris",
+    precio: 1999999,
+    img: "https://static2.o9.de/resource/blob/1504566/5c3b5b8ebb2d87e3933025c6e4cf870e/png/apple-iphone-15-pro-max-natur-gallerybild-1-data.webp",
+  },
+  {
+    id: 2,
+    nombre: "Notebook LENOVO Ideapad 114 igl7 Platinum Gray Intel Dual Core",
+    precio: 369999,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBndBAuOb-sKrwD-2FQwyUmkb2czFxI_KD5fN05Z-MA&s",
+  },
+  {
+    id: 3,
+    nombre: "Tablet SAMSUNG Galaxy Tab S6 Lite 64/4gb 10,4 Wifi",
+    precio: 699999,
+    img: "https://images.samsung.com/is/image/samsung/ar-galaxy-tab-s6-lite-p610-sm-p610nzauaro-frontgray-282037279?$650_519_PNG$",
+  },
+  {
+    id: 4,
+    nombre: 'Smart TV 55" Samsung 4K AU7000',
+    precio: 520199,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3HIV1mOZNlFSC4jiBJn3Gsv4bOtIov7RtN3Nfd5xig&s",
+  },
+  {
+    id: 5,
+    nombre: /Pc Armada Gamer Completa Amd Ryzen 7 5700g 16g Nvme Ver2.0/,
+    precio: 888239,
+    img: "https://http2.mlstatic.com/D_NQ_NP_634957-MLA72460118206_102023-O.webp",
+  },
+  {
+    id: 6,
+    nombre: "Sony Playstation 5 825gb God Of War Ragnarok Bundle.",
+    precio: 999999,
+    img: "https://http2.mlstatic.com/D_NQ_NP_661625-MLU72835349237_112023-O.webp",
+  },
+  {
+    id: 7,
+    nombre: "Heladera Freezer Superior Samsung No Frost 382 L Color Black inox",
+    precio: 1149999,
+    img: "https://images.samsung.com/is/image/samsung/ar-rt38k5932bs-rt38k5932bs-b3-black-199927592?$650_519_PNG$",
+  },
+  {
+    id: 8,
+    nombre: "Lavarropas Automático Inverter Samsung Carga Frontal 9.5kg",
+    precio: 944999,
+    img: "https://www.rodo.com.ar/media/catalog/product/cache/855090a5c67e45b26c9e0d345e7592dc/3/5/353721_lavarropas_samsung_4.jpg",
+  },
+  {
+    id: 9,
+    nombre: "Aire acondicionado Philco split frío/calor 2560 frigorías 220V",
+    precio: 577799,
+    img: "https://philco.com.ar/media/catalog/product/cache/c8f6a96bef9e9f64cd4973587df2520f/a/i/aire_acondicionado_split_fr_ocalor_2560w_negro_philco.jpg",
+  },
+  {
+    id: 10,
+    nombre: "Tostadora Eléctrica Atma To8020i 700w 7 Niveles",
+    precio: 30499,
+    img: "https://http2.mlstatic.com/D_NQ_NP_740243-MLU73980704810_012024-O.webp",
+  },
+  {
+    id: 11,
+    nombre: "Cafetera Nespresso Essenza Mini C30 Automatica Con Aeroccino",
+    precio: 254599,
+    img: "https://images.fravega.com/f300/b3a707f361fd16e86041a0500d3e2260.jpg.webp",
+  },
+  {
+    id: 12,
+    nombre: "Microondas Samsung Grill Cerámico Triple Distribución 23l Sl",
+    precio: 275999,
+    img: "https://www.rodo.com.ar/media/catalog/product/cache/855090a5c67e45b26c9e0d345e7592dc/3/1/315656_samsung_microondas_2.jpg",
+  },
+];
 
-// divProductos.innerHTML = productos
-//   .map(
-//     (producto) => `
-// <div class='col-12 col-md-6 col-lg-3 my-3'>
-//   <div class="card">
-//     <img src="..." class="card-img-top" alt="...">
-//     <div class="card-body">
-//         <h5 class="card-title">${producto.nombre}</h5>
-//         <p class="card-text">${producto.precio}.</p>
-//        <p class="card-text">${producto.codigo}.</p>
-//        <a href="#" class="btn btn-primary">Ver Mas</a>
-//     </div>
-//   </div>
-// </div>
+const container1 = document.getElementById("container1");
+const container2 = document.getElementById("container2");
+const container3 = document.getElementById("container3");
+const container4 = document.getElementById("container4");
 
-// `
-//   )
-//   .join("");
+llenarDiv(container1, 0);
+llenarDiv(container2, 3);
+llenarDiv(container3, 6);
+llenarDiv(container4, 9);
+function llenarDiv(div, inicio) {
+  div.innerHTML = arrayProductos
+    .slice(inicio, inicio + 3)
+    .map((producto) => {
+      return `<div class='col-12 col-md-6 col-lg-3 my-3'>
+    <div class="card">
+      <img src="${producto.img}" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text">${producto.precio}.</p>
+         <a href="#" class="btn btn-primary">Ver Mas</a>
+      </div>
+    </div>
+  </div>`;
+    })
+    .join("");
+}

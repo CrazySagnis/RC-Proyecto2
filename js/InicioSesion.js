@@ -17,6 +17,16 @@ loginInputPassword.placeholder = "Ingrese su CONTRASEÑA";
 
 // Array de Usuarios en LocalStorage
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+document.body.onload = function () {
+  chequearLogeo();
+};
+
+function chequearLogeo() {
+  const usuarioLogeado = usuarios.find((usuario) => usuario.login);
+  if (usuarioLogeado) {
+    location.href = "../pages/Home.html";
+  }
+}
 
 // Objeto para guardar la informacion
 
