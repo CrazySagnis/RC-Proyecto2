@@ -1,12 +1,4 @@
-const arrayProductos = [
-  "Apple",
-  "Arturo",
-  "Banana",
-  "Orange",
-  "Mango",
-  "Pear",
-  "Grape",
-];
+import { arrayProductos } from "./datosProductos.js";
 
 function crearBarraDeBusquedaConAutocompletar(etiqueta, items, itemElegido) {
   // etiqueta = El contenedor padre de todo el codigo.
@@ -31,21 +23,40 @@ function crearBarraDeBusquedaConAutocompletar(etiqueta, items, itemElegido) {
     sugerenciasPanel.innerHTML = "";
     // Inicio el panel de sugerencias vacio
     const sugerencias = items.filter(function (item) {
-      return item.toLowerCase().startsWith(inputText);
-      // Creo un array llamado 'sugerencias' donde se guarda cada item que inicie con las letras tipeadas.
+      return item.nombre.toLowerCase().startsWith(inputText.toLowerCase());
+      // Ahora, 'sugerencias' guarda cada objeto cuyo nombre inicie con las letras tipeadas, sin importar mayúsculas o minúsculas.
     });
+
     sugerencias.forEach(function (sugerido) {
       const div = document.createElement("div");
-      div.innerHTML = sugerido;
-      // Recorro el nuevo array con los resultados, creo un div por cada uno, que contenga su nombre.
+      div.style.display = "flex";
+      div.style.alignItems = "center";
+      div.style.gap = "10px"; // Espacio entre el texto y la imagen
+
+      // Crear el elemento de imagen y configurarlo
+      const img = document.createElement("img");
+      img.src = sugerido.img;
+      img.alt = sugerido.nombre;
+      img.style.width = "30px"; // Ajusta según necesidades
+      img.style.height = "30px"; // Ajusta según necesidades
+      img.style.objectFit = "cover"; // Para mantener la relación de aspecto
+
+      // Crear el elemento de texto
+      const texto = document.createTextNode(sugerido.nombre);
+
+      // Añadir el texto y la imagen al div
+      div.appendChild(img);
+      div.appendChild(texto);
+
       div.addEventListener("click", function () {
-        input.value = sugerido;
+        input.value = sugerido.nombre;
         sugerenciasPanel.innerHTML = ""; // Limpia el panel después de seleccionar
         if (typeof itemElegido === "function") {
           itemElegido(sugerido);
-          // Chequea si el tercer parametro 'itemElegido' es una funcion. En caso de serlo, la invoca con el parametro 'sugerido'
         }
       });
+
+      // Añade este div al panel de sugerencias
       sugerenciasPanel.appendChild(div);
     });
     if (inputText === "") {
@@ -76,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     arrayProductos,
     function (resultado) {
       console.log("Ítem seleccionado:", resultado);
+      window.location.href = `producto-pagina.html?id=${resultado.id}`;
     }
-    //MODIFICARLO PARA QUE ME LLEVE AL LINK DEL SUGERIDO
   );
 });
