@@ -31,7 +31,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid align-items-center">
           <a href="/pages/Home.html"
             ><img src="/images/logo PNG.png" alt="logo empresa" width="65"
           /></a>
@@ -41,7 +41,7 @@
             <form id="contenedorBusqueda" class="d-flex w-75">
               <input
                 id="inputBarraBusqueda"
-                class="form-control me-2"
+                class="input-buscar me-2"
                 type="text"
                 placeholder="Buscar"
                 aria-label="Search"
@@ -81,7 +81,7 @@
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-fondo">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -132,12 +132,12 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active pr-3" href="#">Equipo</a>
+              <li class="nav-item btn-team">
+                <a class="nav-link active pr-3" href="/pages/Equipo.html"
+                  >Equipo</a
+                >
               </li>
-              <ul
-                class="navbar-nav ms-auto mb-2 mb-lg-0 btn-icon align-items-center"
-              >
+              <ul class="navbar-nav mb-2 mb-lg-0 btn-icon align-items-center">
                 <li class="nav-item">
                   <a
                     class="nav-link nav-link icon-heart"
@@ -196,7 +196,12 @@
                         >
                           No
                         </button>
-                        <a class="btn btn-rojo" href="/index.html">Si</a>
+                        <a
+                          id="siCerrarSesion"
+                          class="btn btn-rojo"
+                          href="/index.html"
+                          >Si</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -347,5 +352,6 @@
     ></script>
     <script type="module" src="/js/home.js"></script>
     <script type="module" src="/js/barraBusqueda.js"></script>
+    <script type="module" src="/js/equipo.js"></script>
   </body>
 </html>
