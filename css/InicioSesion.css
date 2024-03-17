@@ -20,6 +20,10 @@
   height: auto;
 }
 
+.img-sesion {
+  height: 100vh;
+}
+
 .input-buscar {
   align-items: center;
   height: 35px;

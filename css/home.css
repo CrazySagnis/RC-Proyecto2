@@ -134,14 +134,18 @@ footer {
 }
 
 .card-img-top {
+  width: 250px;
+  height: 250px;
+  padding: 15px;
+  align-self: center;
   overflow: hidden;
   position: relative;
   transition: transform 1s;
 }
 
 .card {
-  height: 36rem;
-  width: 24rem;
+  height: 26rem;
+  width: 19rem;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -156,6 +160,18 @@ footer {
 
 .card-text {
   color: black;
+}
+
+.card-text-precio {
+  color: black;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.card-text-envio {
+  color: rgb(56, 55, 55);
+  font-size: 10px;
 }
 
 .cuotas {
@@ -178,35 +194,38 @@ footer {
 }
 
 .btn-fav {
+  font-size: 12px;
   color: white;
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   border-radius: 0%;
 }
 
 .btn-carr {
+  font-size: 12px;
   color: white;
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   border-radius: 0%;
 }
 
 .btn-ver {
+  font-size: 12px;
   color: white;
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   border-radius: 0%;
 }
 
 .btn-fav:hover {
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   color: yellow;
 }
 
 .btn-carr:hover {
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   color: rgb(0, 211, 0);
 }
 
 .btn-ver:hover {
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(27, 26, 26);
   color: aqua;
 }
 
