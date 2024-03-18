@@ -1,4 +1,7 @@
 // Tomo los elementos del HTML
+import { usuarios, cargarVerificacionLogeo } from "./verificacionLogeo.js";
+
+cargarVerificacionLogeo();
 
 const registroInputUsuario = document.getElementById("registro-input-usuario");
 
@@ -44,17 +47,7 @@ registroInputPassword.placeholder = "Ingrese su contraseña deseada";
 registroInputRPassword.placeholder = "Repita su contraseña deseada";
 
 // Array de Usuarios en LocalStorage
-const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-document.body.onload = function () {
-  chequearLogeo();
-};
 
-function chequearLogeo() {
-  const usuarioLogeado = usuarios.find((usuario) => usuario.login);
-  if (usuarioLogeado) {
-    location.href = "../pages/Home.html";
-  }
-}
 // Objeto para guardar la informacion
 
 const formUsuario = {

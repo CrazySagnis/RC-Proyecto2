@@ -22,6 +22,7 @@
       src="https://kit.fontawesome.com/ee59c5ffab.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/css/barraBusqueda.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/equipo.css" />
     <title>Pagina principal</title>
@@ -30,7 +31,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid align-items-center">
           <a href="/pages/Home.html"
             ><img src="/images/logo PNG.png" alt="logo empresa" width="65"
           /></a>
@@ -40,7 +41,7 @@
             <form id="contenedorBusqueda" class="d-flex w-75">
               <input
                 id="inputBarraBusqueda"
-                class="form-control me-2"
+                class="input-buscar me-2"
                 type="text"
                 placeholder="Buscar"
                 aria-label="Search"
@@ -80,7 +81,7 @@
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-fondo">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -131,12 +132,12 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active pr-3" href="#">Equipo</a>
+              <li class="nav-item btn-team">
+                <a class="nav-link active pr-3" href="/pages/Equipo.html"
+                  >Equipo</a
+                >
               </li>
-              <ul
-                class="navbar-nav ms-auto mb-2 mb-lg-0 btn-icon align-items-center"
-              >
+              <ul class="navbar-nav mb-2 mb-lg-0 btn-icon align-items-center">
                 <li class="nav-item">
                   <a
                     class="nav-link nav-link icon-heart"
@@ -195,13 +196,18 @@
                         >
                           No
                         </button>
-                        <a class="btn btn-rojo" href="/index.html">Si</a>
+                        <a
+                          id="siCerrarSesion"
+                          class="btn btn-rojo"
+                          href="/index.html"
+                          >Si</a
+                        >
                       </div>
                     </div>
                   </div>
                 </div>
               </ul>
-            </ul>          
+            </ul>
           </div>
         </div>
       </nav>
@@ -258,29 +264,6 @@
                 el fin de semana.
               </p>
             </div>
-          </div>
-          <!-- <div
-            class="col-9 col-md-5 col-lg-2 d-flex flex-column mb-5 mt-4 border b-author bg-color cont-author"
-          >
-             <div>
-              <div class="d-flex justify-content-center my-2">
-                <img
-                  src="../images/gonzalo.jpg"
-                  alt="Gonzalo"
-                  width="175"
-                  height="175"
-                  class="img-author"
-                />
-              </div>
-              <h4 class="text-center my-1">Gonzalo Martinez</h4>
-              <p class="p-1 text-center">
-                ¡Hola a todos! Mi nombre es Gonzalo Martínez, soy de la ciudad
-                de San Miguel deTucumán, tengo 20 años. Soy una persona muy
-                activa, me gusta mucho ir al gimnasio, me gusta mucho escuchar
-                música, pasar tiempo con amigos, hacer deportes, jugar a
-                videojuegos y estar  con mi familia.
-              </p>
-            </div> -->
           </div>
         </div>
       </div>
@@ -367,6 +350,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/home.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/barraBusqueda.js"></script>
+    <script type="module" src="/js/equipo.js"></script>
   </body>
 </html>
