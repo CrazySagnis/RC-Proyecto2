@@ -7,7 +7,7 @@ export const arrayProductos = [
     stock: 8,
     descripcion:
       "El iPhone 15 Pro (128-256GB) Titanio Gris es la última versión del icónico smartphone de Apple. Con una elegante carcasa de titanio en color gris, ofrece capacidades de almacenamiento de 128GB o 256GB para satisfacer tus necesidades digitales. Equipado con tecnología de vanguardia, una potente cámara, y un rendimiento excepcional, el iPhone 15 Pro redefine la experiencia móvil de alta gama.",
-    img: "https://static2.o9.de/resource/blob/1504566/5c3b5b8ebb2d87e3933025c6e4cf870e/png/apple-iphone-15-pro-max-natur-gallerybild-1-data.webp",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6V80s5urOrzSS5G4sHtUNT9e0qjmWJBUNWOYWJXztxg&s",
   },
   {
     id: 2,
@@ -95,7 +95,8 @@ export const arrayProductos = [
     descuento: 1049999,
     precio: 944999,
     stock: 1,
-    descripcion: "El Lavarropas Inverter Samsung de Carga Frontal con capacidad de 9.5kg ofrece una solución eficiente y confiable para el lavado de ropa. Con tecnología Inverter, garantiza un funcionamiento más silencioso y un menor consumo de energía, lo que resulta en un ahorro a largo plazo. Su diseño de carga frontal facilita la carga y descarga de la ropa, mientras que su amplia capacidad permite lavar grandes cargas en cada ciclo. Equipado con múltiples programas de lavado y funciones adicionales, este lavarropas ofrece versatilidad y comodidad para adaptarse a diferentes tipos de prendas y necesidades de lavado. Es una opción ideal para hogares que buscan eficiencia y rendimiento en su electrodoméstico de lavado.",
+    descripcion:
+      "El Lavarropas Inverter Samsung de Carga Frontal con capacidad de 9.5kg ofrece una solución eficiente y confiable para el lavado de ropa. Con tecnología Inverter, garantiza un funcionamiento más silencioso y un menor consumo de energía, lo que resulta en un ahorro a largo plazo. Su diseño de carga frontal facilita la carga y descarga de la ropa, mientras que su amplia capacidad permite lavar grandes cargas en cada ciclo. Equipado con múltiples programas de lavado y funciones adicionales, este lavarropas ofrece versatilidad y comodidad para adaptarse a diferentes tipos de prendas y necesidades de lavado. Es una opción ideal para hogares que buscan eficiencia y rendimiento en su electrodoméstico de lavado.",
     img: "https://www.rodo.com.ar/media/catalog/product/cache/855090a5c67e45b26c9e0d345e7592dc/3/5/353721_lavarropas_samsung_4.jpg",
   },
   {
@@ -104,7 +105,8 @@ export const arrayProductos = [
     descuento: 722499,
     precio: 577799,
     stock: 0,
-    descripcion: "El aire acondicionado Philco Split frío/calor de 2560 frigorías es un sistema versátil que proporciona tanto enfriamiento como calefacción para espacios medianos a grandes. Con diseño Split, ofrece eficiencia energética y confort, con características modernas como control remoto y temporizadores programables. Ideal para mantener un ambiente interior confortable durante todo el año.",
+    descripcion:
+      "El aire acondicionado Philco Split frío/calor de 2560 frigorías es un sistema versátil que proporciona tanto enfriamiento como calefacción para espacios medianos a grandes. Con diseño Split, ofrece eficiencia energética y confort, con características modernas como control remoto y temporizadores programables. Ideal para mantener un ambiente interior confortable durante todo el año.",
     img: "https://philco.com.ar/media/catalog/product/cache/c8f6a96bef9e9f64cd4973587df2520f/a/i/aire_acondicionado_split_fr_ocalor_2560w_negro_philco.jpg",
   },
   {
@@ -113,7 +115,8 @@ export const arrayProductos = [
     descuento: 198799,
     precio: 153577,
     stock: 1,
-    descripcion: "El horno de mesa eléctrico Ultracomb de 45 litros en color negro/rojo es un electrodoméstico compacto y versátil diseñado para cocinar una variedad de alimentos. Con capacidad para 45 litros, es ideal para hogares pequeños o como complemento a la cocina principal. Su diseño de mesa permite colocarlo fácilmente en cualquier superficie plana. Con funciones de horneado, asado y tostado, ofrece opciones culinarias variadas. Además, su estética en negro/rojo le da un toque moderno a la cocina.",
+    descripcion:
+      "El horno de mesa eléctrico Ultracomb de 45 litros en color negro/rojo es un electrodoméstico compacto y versátil diseñado para cocinar una variedad de alimentos. Con capacidad para 45 litros, es ideal para hogares pequeños o como complemento a la cocina principal. Su diseño de mesa permite colocarlo fácilmente en cualquier superficie plana. Con funciones de horneado, asado y tostado, ofrece opciones culinarias variadas. Además, su estética en negro/rojo le da un toque moderno a la cocina.",
     img: "https://http2.mlstatic.com/D_NQ_NP_711042-MLU72558581086_112023-O.webp",
   },
   {
@@ -122,7 +125,8 @@ export const arrayProductos = [
     descuento: 47729,
     precio: 30499,
     stock: 4,
-    descripcion: "La Tostadora Eléctrica Atma TO8020i es un electrodoméstico diseñado para tostar pan de manera rápida y eficiente. Con una potencia de 700W, ofrece un rendimiento adecuado para un uso doméstico estándar. Este modelo cuenta con 7 niveles de tostado que permiten ajustar el grado de dorado del pan según las preferencias del usuario, desde un tostado ligero hasta uno más crujiente y oscuro.",
+    descripcion:
+      "La Tostadora Eléctrica Atma TO8020i es un electrodoméstico diseñado para tostar pan de manera rápida y eficiente. Con una potencia de 700W, ofrece un rendimiento adecuado para un uso doméstico estándar. Este modelo cuenta con 7 niveles de tostado que permiten ajustar el grado de dorado del pan según las preferencias del usuario, desde un tostado ligero hasta uno más crujiente y oscuro.",
     img: "https://http2.mlstatic.com/D_NQ_NP_740243-MLU73980704810_012024-O.webp",
   },
   {
@@ -131,7 +135,8 @@ export const arrayProductos = [
     descuento: 289999,
     precio: 254599,
     stock: 0,
-    descripcion: "La Cafetera Nespresso Essenza C30 con Aeroccino es una máquina de café compacta y elegante que ofrece la conveniencia de preparar café de alta calidad en casa con solo presionar un botón. Esta cafetera utiliza cápsulas Nespresso para garantizar una experiencia consistente y deliciosa en cada taza. El modelo Essenza C30 viene equipado con el Aeroccino, un accesorio que permite espumar la leche automáticamente para preparar una variedad de bebidas como capuchinos y lattes. Con su diseño intuitivo y tamaño compacto, es ideal para espacios reducidos en la cocina.",
+    descripcion:
+      "La Cafetera Nespresso Essenza C30 con Aeroccino es una máquina de café compacta y elegante que ofrece la conveniencia de preparar café de alta calidad en casa con solo presionar un botón. Esta cafetera utiliza cápsulas Nespresso para garantizar una experiencia consistente y deliciosa en cada taza. El modelo Essenza C30 viene equipado con el Aeroccino, un accesorio que permite espumar la leche automáticamente para preparar una variedad de bebidas como capuchinos y lattes. Con su diseño intuitivo y tamaño compacto, es ideal para espacios reducidos en la cocina.",
     img: "https://images.fravega.com/f300/b3a707f361fd16e86041a0500d3e2260.jpg.webp",
   },
   {
@@ -140,7 +145,8 @@ export const arrayProductos = [
     descuento: 321999,
     precio: 275999,
     stock: 8,
-    descripcion: "El Microondas Samsung Grill Cerámico Triple de 23 litros (modelo SL) es un electrodoméstico de cocina versátil y eficiente que combina la tecnología de microondas con una función de grill. Con su capacidad de 23 litros, es ideal para hogares pequeños o medianos. Este microondas utiliza un revestimiento interior de cerámica triple, que no solo facilita la limpieza, sino que también proporciona una distribución más uniforme del calor, lo que resulta en alimentos cocinados de manera más uniforme y con menos riesgo de quemarse.",
+    descripcion:
+      "El Microondas Samsung Grill Cerámico Triple de 23 litros (modelo SL) es un electrodoméstico de cocina versátil y eficiente que combina la tecnología de microondas con una función de grill. Con su capacidad de 23 litros, es ideal para hogares pequeños o medianos. Este microondas utiliza un revestimiento interior de cerámica triple, que no solo facilita la limpieza, sino que también proporciona una distribución más uniforme del calor, lo que resulta en alimentos cocinados de manera más uniforme y con menos riesgo de quemarse.",
     img: "https://www.rodo.com.ar/media/catalog/product/cache/855090a5c67e45b26c9e0d345e7592dc/3/1/315656_samsung_microondas_2.jpg",
   },
   {
@@ -149,7 +155,8 @@ export const arrayProductos = [
     descuento: 89999,
     precio: 69999,
     stock: 7,
-    descripcion: "La Licuadora Smartlife de 1,5 litros es un electrodoméstico diseñado para la preparación de batidos, jugos y otras bebidas con ingredientes frescos. Con una capacidad de 1,5 litros, es ideal para uso doméstico y puede satisfacer las necesidades de una familia pequeña o mediana. Este modelo de licuadora suele estar equipado con un motor potente que permite triturar fácilmente frutas, verduras y otros ingredientes, proporcionando resultados suaves y consistentes. Además, generalmente ofrece múltiples velocidades y funciones preprogramadas para adaptarse a diferentes tipos de alimentos y preferencias de preparación.",
+    descripcion:
+      "La Licuadora Smartlife de 1,5 litros es un electrodoméstico diseñado para la preparación de batidos, jugos y otras bebidas con ingredientes frescos. Con una capacidad de 1,5 litros, es ideal para uso doméstico y puede satisfacer las necesidades de una familia pequeña o mediana. Este modelo de licuadora suele estar equipado con un motor potente que permite triturar fácilmente frutas, verduras y otros ingredientes, proporcionando resultados suaves y consistentes. Además, generalmente ofrece múltiples velocidades y funciones preprogramadas para adaptarse a diferentes tipos de alimentos y preferencias de preparación.",
     img: "https://smartlifear.vtexassets.com/arquivos/ids/155404-800-auto?v=638127554587230000&width=800&height=auto&aspect=true",
   },
 ];
