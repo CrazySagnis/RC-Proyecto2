@@ -47,7 +47,7 @@ function botonFavorito() {
   function actualizarTextoBoton(button, idProducto) {
     const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     if (favoritos.some((fav) => fav.id == idProducto)) {
-      button.innerHTML = `<i class="fa-solid fa-heart-circle-minus"></i>`;
+      button.innerHTML = `<i class="icono-fav fa-solid fa-heart-circle-minus"></i>`;
     } else {
       button.innerHTML = `<i class="fa-solid fa-heart-circle-plus"></i>`;
     }

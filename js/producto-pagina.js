@@ -38,7 +38,7 @@ function mostrarInformacionProducto(productoId) {
     } else {
       contenedorProducto.innerHTML = `
       <div class='contenedor-producto-1'>
-        <div class="imagen-producto ms-5">
+        <div class="imagen-producto">
           <img src="${producto.img}" alt="${producto.nombre}">
         </div>
         <div class="detalles-producto">

@@ -26,6 +26,10 @@ header {
   padding: 0px 4px;
 }
 
+.icono-fav {
+  color: red;
+}
+
 .fav-icon:hover {
   color: azure;
 }
