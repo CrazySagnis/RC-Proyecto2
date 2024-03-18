@@ -19,33 +19,36 @@ function mostrarInformacionProducto(productoId) {
     if (producto.stock <= 0) {
       contenedorProducto.innerHTML = `
       <div class='contenedor-producto'>
-        <div class="imagen-producto">
+        <div class="imagen-producto ms-5">
           <img src="${producto.img}" alt="${producto.nombre}">
         </div>
         <div class="detalles-producto">
-          <h1>${producto.nombre}</h1>
-          <p>${producto.precio}</p>
+        <h1 class="nombre-producto">${producto.nombre}</h1>
+        <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
+        <p class="card-text-precio">$${producto.precio}</p> 
           <p>NO HAY STOCK DISPONIBLE</p>
           <div class="acciones-compra">
-            <button type="button " class="btn btn-secondary" disabled>Comprar Ahora</button>
-            <button type="button" class="btn btn-primary">Añadir a favoritos</button> 
-            <button type="button " class="btn btn-secondary" disabled>Añadir a carrito</button>
+          <a href="" class="btn btn-fav"><i class="fa-solid fa-heart-circle-plus"></i></a
+          >
           </div>
         </div>
       </div>
       <div >
-        <h1>Descripcion del Producto y Datos Tecnicos</h1>
-          <p>${producto.descripcion}</p>
+        <h1 class="descripcion-producto my-3">Descripcion del Producto y Datos Tecnicos</h1>
+          <p class="text-center mx-5 px-5 mb-5">${producto.descripcion}</p>
       </div>`;
     } else {
       contenedorProducto.innerHTML = `
       <div class='contenedor-producto'>
-        <div class="imagen-producto">
+        <div class="imagen-producto ms-5">
           <img src="${producto.img}" alt="${producto.nombre}">
         </div>
         <div class="detalles-producto">
-          <h1>${producto.nombre}</h1>
-          <p>${producto.precio}</p>
+          <h1 class="nombre-producto">${producto.nombre}</h1>
+          <h6 class="cuotas">$${
+            producto.descuento
+          }<label class="descuento">15%OFF</label></h6>    
+          <p class="card-text-precio">$${producto.precio}</p>  
           <p>Stock disponible: ${producto.stock} unidades</p>
           <div class="seleccion-cantidad">
             <label for="cantidad-producto">Cantidad:</label>
@@ -60,14 +63,14 @@ function mostrarInformacionProducto(productoId) {
             </select>
           </div>
           <div class="acciones-compra">
-            <button type="button" class="btn btn-primary">Añadir al carrito</button> 
-            <button type="button" class="btn btn-primary">Añadir a favoritos</button> 
-            <button type="button" class="btn btn-secondary">Comprar Ahora</button>
+          <a href="" class="btn btn-fav"><i class="fa-solid fa-heart-circle-plus"></i></a
+          ><a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
+          >
           </div>
         </div>
       </div><div>
-      <h2>Descripcion del Producto y Datos Tecnicos</h2>
-        <p>${producto.descripcion}</p>
+      <h2 class="descripcion-producto my-3">Descripcion del Producto y Datos Tecnicos</h2>
+        <p class="text-center mx-5 px-5 mb-5">${producto.descripcion}</p>
     </div>`;
     }
   }
