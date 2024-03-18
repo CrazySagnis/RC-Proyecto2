@@ -13,7 +13,12 @@
   top: 100%;
   width: 100%;
   background: white;
-  display: none; /* Inicialmente oculto */
+  display: none; /* arranca oculto */
+  top: calc(100%);
+}
+
+#contenedorBusqueda {
+  position: relative;
 }
 
 /* Como se ven las opciones dentro del panel */
