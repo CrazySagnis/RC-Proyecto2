@@ -1,2 +1,3 @@
-import { cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
+import { cargarVerificacionLogeoOff, LogOut } from "./verificacionLogeo.js";
 cargarVerificacionLogeoOff();
+LogOut();

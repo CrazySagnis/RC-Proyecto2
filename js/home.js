@@ -1,16 +1,8 @@
 import { arrayProductos } from "./datosProductos.js";
-import { usuarios, cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
+import { cargarVerificacionLogeoOff, LogOut } from "./verificacionLogeo.js";
 import { botonFavorito } from "./favoritosManager.js";
 cargarVerificacionLogeoOff();
-
-const siCerrarSesion = document.getElementById("siCerrarSesion");
-const cerrarSesion = () => {
-  const posicionUsuario = usuarios.findIndex((usuario) => usuario.login);
-  usuarios[posicionUsuario].login = false;
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-};
-
-siCerrarSesion.addEventListener("click", cerrarSesion);
+LogOut();
 
 const container1 = document.getElementById("container1");
 const container2 = document.getElementById("container2");

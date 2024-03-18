@@ -1,5 +1,8 @@
 import { arrayProductos } from "./datosProductos.js";
 import { removerDeFavoritos } from "./favoritosManager.js";
+import { cargarVerificacionLogeoOff, LogOut } from "./verificacionLogeo.js";
+cargarVerificacionLogeoOff();
+LogOut();
 
 document.addEventListener("DOMContentLoaded", () => {
   mostrarFavoritos();

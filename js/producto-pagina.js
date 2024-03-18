@@ -1,7 +1,8 @@
 import { arrayProductos } from "./datosProductos.js";
-import { cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
+import { LogOut, cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
 import { botonFavorito } from "./favoritosManager.js";
 cargarVerificacionLogeoOff();
+LogOut;
 
 document.addEventListener("DOMContentLoaded", function () {
   // Extrae el ID del producto desde la URL

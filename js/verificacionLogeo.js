@@ -29,6 +29,21 @@ function chequearLogeoOff() {
   }
 }
 
-export { usuarios, cargarVerificacionLogeo, cargarVerificacionLogeoOff };
+function LogOut() {
+  const siCerrarSesion = document.getElementById("siCerrarSesion");
+  const cerrarSesion = () => {
+    const posicionUsuario = usuarios.findIndex((usuario) => usuario.login);
+    usuarios[posicionUsuario].login = false;
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  };
+
+  siCerrarSesion.addEventListener("click", cerrarSesion);
+}
+export {
+  usuarios,
+  cargarVerificacionLogeo,
+  cargarVerificacionLogeoOff,
+  LogOut,
+};
 
 // LO HICE DE DOS MANERAS DISTINTAS PARA VARIAR
