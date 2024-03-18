@@ -4,7 +4,6 @@ import { botonFavorito } from "./favoritosManager.js";
 cargarVerificacionLogeoOff();
 
 const siCerrarSesion = document.getElementById("siCerrarSesion");
-// const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 const cerrarSesion = () => {
   const posicionUsuario = usuarios.findIndex((usuario) => usuario.login);
   usuarios[posicionUsuario].login = false;
