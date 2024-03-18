@@ -1,5 +1,6 @@
 import { arrayProductos } from "./datosProductos.js";
 import { cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
+import { botonFavorito } from "./favoritosManager.js";
 cargarVerificacionLogeoOff();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,10 +28,7 @@ function mostrarInformacionProducto(productoId) {
         <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
         <p class="card-text-precio">$${producto.precio}</p> 
           <p>NO HAY STOCK DISPONIBLE</p>
-          <div class="acciones-compra">
-          <a href="" class="btn btn-fav"><i class="fa-solid fa-heart-circle-plus"></i></a
-          >
-          </div>
+          <button class="btn btn-primary" data-id="${producto.id}">Añadir a Favoritos</button>
         </div>
       </div>
       <div >
@@ -63,8 +61,10 @@ function mostrarInformacionProducto(productoId) {
             </select>
           </div>
           <div class="acciones-compra">
-          <a href="" class="btn btn-fav"><i class="fa-solid fa-heart-circle-plus"></i></a
-          ><a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
+          <button class="btn btn-primary" data-id="${
+            producto.id
+          }">Añadir a Favoritos</button>
+          <a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
           >
           </div>
         </div>
@@ -75,3 +75,5 @@ function mostrarInformacionProducto(productoId) {
     }
   }
 }
+
+botonFavorito();

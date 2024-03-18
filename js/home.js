@@ -1,5 +1,6 @@
 import { arrayProductos } from "./datosProductos.js";
 import { usuarios, cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
+import { botonFavorito } from "./favoritosManager.js";
 cargarVerificacionLogeoOff();
 
 const siCerrarSesion = document.getElementById("siCerrarSesion");
@@ -27,7 +28,7 @@ function llenarDiv(div, inicio) {
     .map((producto) =>
       // <a href="producto-pagina.html?id=${producto.id}"><img src="${producto.img}" class="card-img-top" alt="..."></a> No puedo hacer que al apretar click en la imagen lleve al producto porque se rompen las dimensiones del card.
       {
-        return `     
+        return ` 
       <div class='col-12 col-md-6 col-lg-3 my-3'>
     <div class="card">
     <img src="${producto.img}" class="card-img-top" alt="...">
@@ -37,9 +38,8 @@ function llenarDiv(div, inicio) {
     </a>
           <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
           <p class="card-text-precio">$${producto.precio}</p>          
-          <a href="" class="btn btn-fav"><i class="fa-solid fa-heart-circle-plus"></i></a
-          ><a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
-          ><a href="producto-pagina.html?id=${producto.id}" class="btn btn-ver"><i class="fa-solid fa-eye"></i></a>
+          <button class="btn btn-primary" data-id="${producto.id}"></button>
+          <a href="producto-pagina.html?id=${producto.id}" class="btn btn-primary">Ver Mas</a>
           <p class="card-text-envio mt-2">
           Envío a S. M. de Tucumán: $7799. Llega aprox. en 72hs.</p>
         </div>
@@ -50,3 +50,5 @@ function llenarDiv(div, inicio) {
     )
     .join("");
 }
+
+botonFavorito();
