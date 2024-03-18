@@ -1,74 +1,21 @@
-import { arrayProductos } from "./datosProductos.js";
-import { cargarVerificacionLogeoOff } from "./verificacionLogeo.js";
-cargarVerificacionLogeoOff();
+(async () => {
+  const Divproductopagina = document.getElementById("idDivproductopagina");
+  const idproductos = location.search.split("=")[1];
+  const productosApi = await fetch(
+    `https://fakestoreapi.com/products/${idproductos}`
+  );
+  const dataApi = await productosApi.json();
+  Divproductopagina.innerHTML`
+  <div class="card">
+    <img src="${dataApi.image}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${dataApi.title}</h5>
+      <p class="card-text">${dataApi.price}</p>
+      <p class="card-text">${dataApi.description}</p>
+      <a href="../pages/producto-pagina.html?id=${dataApi.id})" class="btn btn-primary">Ver Mas</a>
+    </div>
+  </div>  
+</div>
+  `;
+})();
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Extrae el ID del producto desde la URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlid = urlParams.get("id"); // 'id' es el nombre del parámetro en tu URL
-  const idNumerico = Number(urlid);
-  mostrarInformacionProducto(idNumerico);
-});
-
-function mostrarInformacionProducto(productoId) {
-  const producto = arrayProductos.find((p) => p.id === productoId);
-
-  if (producto) {
-    console.log(producto); // Después de encontrar el producto
-    const contenedorProducto = document.getElementById("contenedor-producto");
-    if (producto.stock <= 0) {
-      contenedorProducto.innerHTML = `
-      <div class='contenedor-producto'>
-        <div class="imagen-producto">
-          <img src="${producto.img}" alt="${producto.nombre}">
-        </div>
-        <div class="detalles-producto">
-          <h1>${producto.nombre}</h1>
-          <p>${producto.precio}</p>
-          <p>NO HAY STOCK DISPONIBLE</p>
-          <div class="acciones-compra">
-            <button type="button " class="btn btn-secondary" disabled>Comprar Ahora</button>
-            <button type="button" class="btn btn-primary">Añadir a favoritos</button> 
-            <button type="button " class="btn btn-secondary" disabled>Añadir a carrito</button>
-          </div>
-        </div>
-      </div>
-      <div >
-        <h1>Descripcion del Producto y Datos Tecnicos</h1>
-          <p>${producto.descripcion}</p>
-      </div>`;
-    } else {
-      contenedorProducto.innerHTML = `
-      <div class='contenedor-producto'>
-        <div class="imagen-producto">
-          <img src="${producto.img}" alt="${producto.nombre}">
-        </div>
-        <div class="detalles-producto">
-          <h1>${producto.nombre}</h1>
-          <p>${producto.precio}</p>
-          <p>Stock disponible: ${producto.stock} unidades</p>
-          <div class="seleccion-cantidad">
-            <label for="cantidad-producto">Cantidad:</label>
-            <select id="cantidad-producto" name="cantidad">
-              ${Array.from(
-                { length: producto.stock },
-                (_, i) =>
-                  `<option value="${i + 1}">
-                  ${i + 1} unidad${i > 0 ? "es" : ""}
-                </option>`
-              ).join("")}
-            </select>
-          </div>
-          <div class="acciones-compra">
-            <button type="button" class="btn btn-primary">Añadir al carrito</button> 
-            <button type="button" class="btn btn-primary">Añadir a favoritos</button> 
-            <button type="button" class="btn btn-secondary">Comprar Ahora</button>
-          </div>
-        </div>
-      </div><div>
-      <h2>Descripcion del Producto y Datos Tecnicos</h2>
-        <p>${producto.descripcion}</p>
-    </div>`;
-    }
-  }
-}
