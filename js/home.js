@@ -38,8 +38,8 @@ function llenarDiv(div, inicio) {
     </a>
           <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
           <p class="card-text-precio">$${producto.precio}</p>          
-          <button class="btn btn-primary" data-id="${producto.id}"></button>
-          <a href="producto-pagina.html?id=${producto.id}" class="btn btn-primary">Ver Mas</a>
+          <button class="btn btn-fav" data-id="${producto.id}"></button>          
+          <a href="producto-pagina.html?id=${producto.id}" class="btn btn-ver"><i class="fa-solid fa-eye"></i></a>
           <p class="card-text-envio mt-2">
           Envío a S. M. de Tucumán: $7799. Llega aprox. en 72hs.</p>
         </div>

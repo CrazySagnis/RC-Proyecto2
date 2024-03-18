@@ -28,12 +28,13 @@ function mostrarFavoritos() {
       const elementoProducto = document.createElement("div");
       elementoProducto.classList.add("producto-favorito");
       elementoProducto.innerHTML = `
-        <div style="border: 1px solid #ddd; margin: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div class="contenedor-producto">
           <img src="${producto.img}" alt="${producto.nombre}" style="width:100px; height:100px;">
           <a href="producto-pagina.html?id=${producto.id}" class="link-negro"">
-            <h2 class="card-title">${producto.nombre}</h2>
+            <h2 class="card-title-fav">${producto.nombre}</h2>
           </a>
-          <p>Precio: $${producto.precio}</p>
+          <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
+          <p class="card-text-precio">$${producto.precio}</p>
         </div>
       `;
       // Crear botón eliminar

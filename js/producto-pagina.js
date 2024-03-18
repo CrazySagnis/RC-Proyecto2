@@ -19,7 +19,7 @@ function mostrarInformacionProducto(productoId) {
     const contenedorProducto = document.getElementById("contenedor-producto");
     if (producto.stock <= 0) {
       contenedorProducto.innerHTML = `
-      <div class='contenedor-producto'>
+      <div class='contenedor-producto-1'>
         <div class="imagen-producto ms-5">
           <img src="${producto.img}" alt="${producto.nombre}">
         </div>
@@ -28,7 +28,7 @@ function mostrarInformacionProducto(productoId) {
         <h6 class="cuotas">$${producto.descuento}<label class="descuento">15%OFF</label></h6>    
         <p class="card-text-precio">$${producto.precio}</p> 
           <p>NO HAY STOCK DISPONIBLE</p>
-          <button class="btn btn-primary" data-id="${producto.id}">Añadir a Favoritos</button>
+          <button class="btn btn-fav" data-id="${producto.id}"></button>
         </div>
       </div>
       <div >
@@ -37,7 +37,7 @@ function mostrarInformacionProducto(productoId) {
       </div>`;
     } else {
       contenedorProducto.innerHTML = `
-      <div class='contenedor-producto'>
+      <div class='contenedor-producto-1'>
         <div class="imagen-producto ms-5">
           <img src="${producto.img}" alt="${producto.nombre}">
         </div>
@@ -60,12 +60,8 @@ function mostrarInformacionProducto(productoId) {
               ).join("")}
             </select>
           </div>
-          <div class="acciones-compra">
-          <button class="btn btn-primary" data-id="${
-            producto.id
-          }">Añadir a Favoritos</button>
-          <a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
-          >
+          <div>
+          <button class="btn mt-3 btn-fav" data-id="${producto.id}"></button>
           </div>
         </div>
       </div><div>
