@@ -149,7 +149,7 @@ function llenarDiv(div, inicio) {
           ><a href="" class="btn btn-carr mx-2"><i class="fa-solid fa-cart-plus"></i></a
           ><a href="" class="btn btn-ver"><i class="fa-solid fa-eye"></i></a>
           <p class="card-text-envio mt-2">
-          Envío a S. M. de Tucumán: $7799. Llega aprox. en 48hs.</p>
+          Envío a S. M. de Tucumán: $7799. Llega aprox. en 72hs.</p>
         </div>
       </div>
     </div>
